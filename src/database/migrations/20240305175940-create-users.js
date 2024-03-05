@@ -1,8 +1,10 @@
 'use strict'
 
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
+  async up  (queryInterface, Sequelize) {
     await queryInterface.createTable('users', {
+      
       id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
@@ -22,7 +24,7 @@ module.exports = {
       },
 
       password_hash: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING, 
         allowNull: false,
       },
 
@@ -30,6 +32,7 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
         allowNull: false,
+        
       },
 
       created_at: {
@@ -44,7 +47,8 @@ module.exports = {
     })
   },
 
-  down: async (queryInterface) => {
+  async down (queryInterface) {
     await queryInterface.dropTable('users')
-  },
+
+  }
 }

@@ -2,8 +2,7 @@
   "name": "new-project-code-burger",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.cjs",
-  "type": "module",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
@@ -17,6 +16,7 @@
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.1"
+ 
   },
   "devDependencies": {
     "eslint": "^8.0.1",
